@@ -117,13 +117,14 @@ header .navbar {
 
 .navbar :where(#menu-close-button, #menu-open-button) {
     display: none;
-
 }
 
 /*========== HERO SECTION ===========================================================================================*/
 .hero-section {
     min-height: 70vh;
     background-image: linear-gradient(90deg, #000, #000 90%);
+    /* Adding padding-top to account for the fixed header */
+    padding-top: 70px;
 }
 
 .hero-section .section-content {
@@ -247,8 +248,8 @@ header .navbar {
 
     body.show-mobile-menu .navbar .nav-menu {
         right: 0;
-        
     }
+    
     .navbar .nav-menu .nav-link {
         color: var(--white-color);
         font-size: var(--font-size-l);
@@ -256,10 +257,16 @@ header .navbar {
         margin-top: 17px;
     }
 
+    .hero-section {
+        /* Increase padding-top for mobile to give more space at the top */
+        padding-top: 80px;
+    }
+
     .hero-section .section-content {
         gap: 50px;
         text-align: center;
-        padding: 30px 20px 20px;
+        /* Increased top padding to give more space for the image */
+        padding: 60px 20px 20px;
         flex-direction: column-reverse;
         justify-content: center;
     }
@@ -270,11 +277,14 @@ header .navbar {
         
     .hero-section .hero-details .buttons {
         justify-content: center;
-        
     }
 
     .hero-section .hero-image-wrapper {
         max-width: 270px;
         margin-right: 0;
+        /* Added margin-top to push image down from the header */
+        margin-top: 20px;
+        /* Ensure the image is fully visible */
+        overflow: visible;
     }
 }
