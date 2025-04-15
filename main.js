@@ -1,10 +1,25 @@
-const menuOpenButton = document.querySelector("#menu-open-button");
-const menuCloseButton = document.querySelector("#menu-close-button");
+//=============================== Toggle do menu mobile ===============================
+const toggleBtn = document.querySelector('.toggle-btn');
+const navLinks = document.querySelector('.nav-links');
 
-menuOpenButton.addEventListener("click", () => { 
-    //================ VISIBILIDADE DO MENU MOBILE ====================
-   document.body.classList.toggle("show-mobile-menu");
+toggleBtn.addEventListener('click', function() {
+    navLinks.classList.toggle('show-links');
 });
-//=================== FECHAR O MENU MOBILE  ====================
-menuCloseButton.addEventListener("click", () => menuOpenButton.click()); 
-    
+
+
+//============================== Animação de fade-in ao rolar ============================
+function checkFade() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const triggerBottom = window.innerHeight * 0.8;
+
+    fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < triggerBottom) {
+            element.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkFade);
+window.addEventListener('load', checkFade);
