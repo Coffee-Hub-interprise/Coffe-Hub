@@ -1,4 +1,4 @@
-/*============== VARIAVEIS E RESET =================================================================================================*/
+/*============== ESTILOS GERAIS =================================================================================================*/
 :root {
     --clr-primary: #4a3728;
     --clr-secondary: #c8a27a;
@@ -18,36 +18,32 @@
     --fixed-width: 600px;
 }
 
-*, 
-::after, 
-::before {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: var(--ff-secondary);
-    background-color: var(--clr-black);
-    color: var(--clr-dark);
+    font-family: 'Georgia', serif;
+    background-color: #121212;
+    color: #2f2318;
     line-height: 1.5;
     font-size: 16px;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none;  
 }
 
 h1, h2, h3, h4 {
-    font-family: var(--ff-primary);
+    font-family: 'Georgia', serif;
     letter-spacing: 1px;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
+    line-height: 1.25; 
 }
 
 h1 {
@@ -77,36 +73,6 @@ img {
 
 .section {
     padding: 5rem 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-title h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: var(--clr-secondary);
-}
-
-.section-title .subtitle, .insta-title .subtitle {
-    color: var(--clr-secondary);
-    font-style: italic;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 0.875rem;
 }
 
 .container {
@@ -144,7 +110,7 @@ img {
 }
 
 
-/*============== NAVBAR SECTION =================================================================================================*/
+/*============== HEADER SECTION =================================================================================================*/
 .navbar {
     background: #2f2318;
     box-shadow: var(--shadow-light);
@@ -385,6 +351,36 @@ img {
     gap: 2.5rem;
 }
 
+.process-section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.process-section-title h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.process-section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--clr-secondary);
+}
+
+.process-section-title .subtitle {
+    color: var(--clr-secondary);
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
 .process-card {
     background: var(--clr-white);
     border-radius: var(--radius);
@@ -444,6 +440,28 @@ img {
     background: var(--clr-white);
 }
 
+.destaque-section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.destaque-section-title h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.destaque-section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--clr-secondary);
+}
+
 .features-center {
     display: grid;
     gap: 2.5rem;
@@ -499,6 +517,14 @@ img {
     width: 50px;
     height: 3px;
     background: var(--clr-secondary);
+}
+
+.insta-title .subtitle {
+    color: var(--clr-secondary);
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
 }
 
 .instagram-center {
@@ -640,6 +666,10 @@ img {
     margin-top: 2rem;
 }
 
+.social-icons a {
+    color: inherit;
+}
+
 .social-item {
     width: 40px;
     height: 40px;
@@ -697,6 +727,7 @@ img {
 .contact-text a{
     transition: 0.3s ease;
     display: block;
+    color: inherit;
 }
 
 .contact-text a:hover {
