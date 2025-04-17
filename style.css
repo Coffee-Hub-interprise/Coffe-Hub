@@ -115,11 +115,10 @@ img {
 /*============== HEADER SECTION =================================================================================================*/
 .navbar {
     background: #2f2318;
-    box-shadow: var(--shadow-light);
     padding: 1rem 0;
 }
 
-.nav-header {
+.btn-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,7 +144,7 @@ img {
 }
 
 .toggle-btn:hover {
-    color: var(--clr-secondary);
+    color: var(--clr-tertiary);
     transform: rotate(90deg);
 }
 
@@ -173,14 +172,11 @@ img {
     transition: var(--transition);
 }
 
-.nav-link:hover {
-    color: var(--clr-secondary);
-    padding-left: 1rem;
-}
+
 
 /*============== HERO SECTION =================================================================================================*/
 .hero {
-    min-height: 60vh;
+    min-height: 60vh; /*viewport height*/
     display: flex;
     place-items: center;
     background: linear-gradient(#000, #121212), url('/api/placeholder/1920/1080') center/cover no-repeat;
@@ -188,7 +184,6 @@ img {
 
 .hero-container {
     text-align: center;
-    color: var(--clr-white);
     max-width: var(--fixed-width);
 }
 
@@ -203,14 +198,16 @@ img {
 
 .hero-title {
     text-transform: capitalize;
+    color: var(--clr-white);
     font-size: 3rem;
     margin-bottom: 1.5rem;
     animation: slideInLeft 1s ease-in-out;
 }
 
 .hero-desc {
+    color: var(--clr-white);
     margin-bottom: 2rem;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
 .btn-high {
@@ -285,7 +282,7 @@ img {
     border-radius: var(--radius);
 }
 
-.about-info .subtitle {
+ .about-info .subtitle {
     margin-bottom: 1rem;
     color: var(--clr-secondary);
     font-style: italic;
@@ -355,13 +352,13 @@ img {
 
 .process-section-title {
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 .process-section-title h2 {
     position: relative;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
+    color: var(--clr-dark);
 }
 
 .process-section-title h2::after {
@@ -398,20 +395,6 @@ img {
     box-shadow: var(--shadow-dark);
 }
 
-.process-icon {
-    position: absolute;
-    top: -1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--clr-secondary);
-    color: var(--clr-white);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 1.5rem;
-}
 
 .process-number {
     color: var(--clr-tertiary);
@@ -434,9 +417,15 @@ img {
     color: var(--clr-white);
 }
 
-.features-subtitle {
+
+.destaque-section-title .subtitle {
     color: var(--clr-secondary);
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
 }
+
 
 .features-title h2::after {
     background: var(--clr-white);
@@ -803,6 +792,7 @@ img {
 
 
 /*============== ANIMACOES DE SCROLL =====================================================================================*/
+
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
@@ -815,15 +805,14 @@ img {
 }
 
 
-
 /*============= MEDIA QUERIES =============================================================================================*/
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) {       /*Ajuste para tablets pequenos*/
     .process-center {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {    /*Ajuste para tablets e Notebooks*/
     .about-center {
         grid-template-columns: 1fr 1fr;
         align-items: center;
@@ -846,7 +835,7 @@ img {
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {   /*Ajuste para Desktops*/
     h1 {
         font-size: 3rem;
     }
@@ -863,7 +852,7 @@ img {
         font-size: 1rem;
     }
     
-    .nav-header {
+    .btn-header {
         padding: 0;
     }
     
@@ -872,6 +861,7 @@ img {
         align-items: center;
         justify-content: space-between;
     }
+    
     
     .nav-links {
         display: flex;
