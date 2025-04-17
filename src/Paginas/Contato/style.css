@@ -378,6 +378,7 @@ padding: 20px;
     flex: 1;
     border-left: 2px solid #2f2318;
     padding-left: 80px;
+    color: #ffffff;
 }
 
 input, textarea{
@@ -409,6 +410,7 @@ background-color: #f8f1ea;
 }
 .contact-info-item{
     margin-bottom: 20px;
+    color: #ffffff;
 }
 strong{
     font-size: 53px;
