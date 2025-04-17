@@ -371,7 +371,7 @@ padding: 20px;
 
 .contact-form{
     flex: 1;
-    font-size: 10px;
+    font-size: 12px;
 
 }
 .contact-info{
@@ -397,17 +397,19 @@ button[type="submit"]{
 }
 
 button:hover{
-    background-color: #4d3924;
+    background-color: #a37747;
 }
 
 button{
 border: 10px;
 border-radius: 4px;
-font-size: 12px;
+font-size: 17px;
 color: #574431;
 background-color: #f3e2cf;
-
 }
 .contact-info-item{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+strong{
+    font-size: 53px;
 }
