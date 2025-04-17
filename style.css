@@ -624,7 +624,7 @@ img {
 .footer {
     background: var(--clr-dark);
     color: var(--clr-light);
-    padding-top: 5rem;
+    padding-top: 4rem;
 }
 
 .footer-center {
@@ -644,7 +644,7 @@ img {
 .logo-low img{
     width: 300px;
     height: 110px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .footer-desc {
@@ -701,7 +701,7 @@ img {
 
 .contact-item {
     margin-bottom: 1rem;
-    display: flex;
+    display: block;
     gap: 1rem;
     align-items: flex-start;
 }
@@ -717,6 +717,7 @@ img {
 
 .contact-text a{
     transition: 0.3s ease;
+    padding-bottom: 0.40rem;
     display: block;
     color: inherit;
 }
