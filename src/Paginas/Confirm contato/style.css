@@ -1,0 +1,200 @@
+/*============== ESTILOS GERAIS =================================================================================================*/
+:root {
+    --clr-primary: #4a3728;
+    --clr-secondary: #c8a27a;
+    --clr-tertiary: #f4e9d9;
+    --clr-dark: #2f2318;
+    --clr-light: #f8f4ef;
+    --clr-white: #ffffff;
+    --clr-black: #121212;
+    --ff-primary: 'Georgia', serif;
+    --ff-secondary: 'Lato', sans-serif;
+    --transition: all 0.3s linear;
+    --max-width: 1300px;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--clr-black);
+    color: #2f2318;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(92, 64, 51, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    line-height: 1.25;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+/*============== CONFIRMATION SECTION =================================================================================================*/
+.confirmation-section {
+    padding: 5rem 0;
+    min-height: 60vh;
+    margin-top: 15rem;
+}
+
+.confirmation-card {
+    background: var(--clr-white);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-tertiary);
+    margin: 0 auto 2rem;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(200, 162, 122, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(200, 162, 122, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(200, 162, 122, 0);
+    }
+}
+
+.checkmark::before {
+    content: '';
+    width: 30px;
+    height: 15px;
+    border-left: 4px solid var(--clr-secondary);
+    border-bottom: 4px solid var(--clr-secondary);
+    position: absolute;
+    transform: rotate(-45deg) translate(3px, -5px);
+    animation: check 0.8s ease-in-out 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes check {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        width: 15px;
+        height: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 30px;
+        height: 15px;
+    }
+}
+
+.confirmation-title {
+    color: var(--clr-dark);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.5s forwards;
+}
+
+.confirmation-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--clr-primary), var(--clr-secondary), var(--clr-primary));
+    margin: 15px auto;
+    border-radius: 4px;
+}
+
+.confirmation-message {
+    color: var(--clr-primary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.8s forwards;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid var(--clr-dark);
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--clr-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 1s forwards;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    box-shadow: 0 10px 20px rgba(85, 68, 51, 0.6);
+}
+
