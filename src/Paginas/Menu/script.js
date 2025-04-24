@@ -23,12 +23,3 @@ function checkFade() {
 
 window.addEventListener('scroll', checkFade);
 window.addEventListener('load', checkFade);
-
-
-// Animação para ícones especiais
-const specialIcons = document.querySelectorAll('.special-icon');
-if (specialIcons.length > 0) {
-    specialIcons.forEach((icon, index) => {
-        icon.style.animationDelay = `${index * 0.5}s`;
-    });
-}

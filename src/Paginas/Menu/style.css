@@ -151,15 +151,11 @@ img {
 /*============== HERO SECTION =================================================================================================*/
 .hero-section {
     background-color: var(--clr-black);
-    background-position: center;
-    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .hero-section::before {
@@ -185,6 +181,7 @@ img {
     margin-bottom: 20px;
     letter-spacing: 1px;
     font-weight: 800;
+    color: var(--clr-white);
 }
 
 .hero-section h1 span {
@@ -196,6 +193,7 @@ img {
     max-width: 700px;
     margin: 0 auto 30px;
     line-height: 1.6;
+    color: var(--clr-white);
 }
 
 .hero-btn {
@@ -205,7 +203,6 @@ img {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition);
     border: 2px solid var(--clr-primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
@@ -214,7 +211,6 @@ img {
 .hero-btn:hover {
     background-color: transparent;
     color: var(--clr-light);
-    transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     border-color: var(--clr-secondary);
 }
@@ -255,7 +251,6 @@ img {
     color: var(--clr-primary);
     padding-bottom: 15px;
     margin-bottom: 30px;
-    border-bottom: 2px dotted var(--clr-secondary);
     display: inline-block;
     position: relative;
 }
@@ -281,13 +276,11 @@ img {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow-light);
-    transition: var(--transition);
     position: relative;
     border: 1px solid rgba(200, 162, 122, 0.3);
 }
 
 .menu-item:hover {
-    transform: translateY(-8px);
     box-shadow: var(--shadow-dark);
 }
 
@@ -300,31 +293,6 @@ img {
 
 .menu-item:hover .item-image {
     transform: scale(1.05);
-}
-
-.item-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 2;
-    color: white;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.badge-new {
-    background-color: #D93A3A;
-}
-
-.badge-popular {
-    background-color: #D4AF37;
-}
-
-.badge-vegan {
-    background-color: #2E8B57;
 }
 
 .item-content {
@@ -366,15 +334,6 @@ img {
     display: inline-block;
 }
 
-.item-price::before {
-    content: 'R$';
-    font-size: 0.8rem;
-    position: relative;
-    top: -5px;
-    left: -2px;
-    font-weight: 600;
-}
-
 .item-rating {
     display: flex;
     align-items: center;
@@ -386,6 +345,12 @@ img {
 .item-rating span {
     margin-left: 5px;
     color: #777;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .product-btn {
@@ -406,122 +371,6 @@ img {
     color: var(--clr-primary);
     transform: translateY(-3px);
     box-shadow: var(--shadow-dark);
-}
-
-.menu-item:hover {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.item-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/*============== PROMOTIONS SECTION =================================================================================================*/
-.promotions-section {
-    background-color: var(--clr-secondary);
-    padding: 70px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.promotion-card {
-    background-color: white;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: var(--shadow-dark);
-    max-width: 800px;
-    margin: 0 auto 50px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.promotion-card::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(45deg, transparent, rgba(200, 162, 122, 0.1), transparent);
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.promotion-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--clr-primary);
-    font-weight: 800;
-    position: relative;
-    z-index: 1;
-}
-
-.promotion-description {
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-    color: #555;
-    position: relative;
-    z-index: 1;
-}
-
-.promotion-btn {
-    font-size: 1.2rem;
-    padding: 12px 35px;
-    position: relative;
-    z-index: 1;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.specials-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.special-offer {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-}
-
-.special-offer:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-dark);
-}
-
-.special-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    display: inline-block;
-    animation: float 4s ease-in-out infinite;
-}
-
-.special-offer h4 {
-    color: var(--clr-primary);
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.special-offer p {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
 
@@ -671,14 +520,6 @@ img {
 }
 
 
-/*================= Animações ================*/
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-
 /*============= MEDIA QUERIES =============================================================================================*/
 @media screen and (max-width: 480px) {
     .hero-section {
@@ -701,22 +542,6 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .specials-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .promotion-title {
-        font-size: 1.8rem;
-    }
-    
-    .promotion-description {
-        font-size: 1rem;
-    }
-    
-    .promotion-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
 }
 
 @media screen and (min-width: 576px) {       /*Ajuste para tablets pequenos*/
@@ -734,9 +559,6 @@ img {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     
-    .specials-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 @media screen and (min-width: 992px) {   /*Ajuste para Desktops*/

@@ -385,13 +385,11 @@ img {
     border-radius: var(--radius);
     box-shadow: var(--shadow-light);
     position: relative;
-    transition: var(--transition);
     text-align: center;
     padding: 2.5rem 2rem;
 }
 
 .process-card:hover {
-    transform: translateY(-0.5rem);
     box-shadow: var(--shadow-dark);
 }
 
