@@ -250,96 +250,6 @@ img {
 }
 
 
-/*============== SOBRE SECTION =================================================================================================*/
-.about{
-    background-color: var(--clr-black);
-}
-
-.about-center {
-    display: grid;
-    gap: 2rem;
-}
-
-.about-img {
-    position: relative;
-}
-
-.about-img::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 0.5rem solid var(--clr-secondary);
-    top: -1.5rem;
-    left: -1.5rem;
-    border-radius: var(--radius);
-    z-index: -1;
-}
-
-.about-img img {
-    height: 25rem;
-    object-fit: cover;
-    border-radius: var(--radius);
-}
-
- .about-info .subtitle {
-    margin-bottom: 1rem;
-    color: var(--clr-secondary);
-    font-style: italic;
-    letter-spacing: 2px;
-}
-
-.about-title {
-    margin-bottom: 2rem;
-    color: var(--clr-tertiary);
-}
-
-.about-text {
-    line-height: 2;
-    margin-bottom: 2rem;
-    color: var(--clr-tertiary);
-}
-
-.btn-quite {
-    background: transparent;
-    color: var(--clr-tertiary);
-    animation: bounce 2s infinite;
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--clr-tertiary);
-    border-radius: var(--radius);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    transition: var(--transition);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.btn-quite:hover {
-    color: var(--clr-white);
-    border-color: var(--clr-secondary);
-}
-
-.btn-quite::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--clr-secondary);
-    transition: var(--transition);
-    z-index: -1;
-}
-
-.btn-quite:hover::before {
-    width: 100%;
-}
-
-
 /*============== PROCESSO SECTION =================================================================================================*/
 .process {
     background: var(--clr-tertiary);
@@ -812,10 +722,6 @@ img {
 }
 
 @media screen and (min-width: 768px) {    /*Ajuste para tablets e Notebooks*/
-    .about-center {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
     
     .menu-center {
         grid-template-columns: repeat(2, 1fr);
@@ -908,9 +814,5 @@ img {
     
     .process-center {
         grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .news-center {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
