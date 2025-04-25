@@ -731,10 +731,6 @@ img {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .news-center {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
     .footer-center {
         grid-template-columns: 2fr 1fr 1fr 1fr;
     }

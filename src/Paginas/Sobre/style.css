@@ -187,7 +187,6 @@ img {
 .hero-header-content {
     position: relative;
     text-align: center;
-    color: var(--clr-white);
     max-width: 800px;
     margin: 0 auto;
     z-index: 2;
@@ -235,6 +234,7 @@ img {
     position: relative;
     max-width: 800px;
     margin: 0 auto 3rem;
+    overflow: hidden;
 }
 
 .about-img img {
@@ -255,58 +255,15 @@ img {
     color: var(--clr-tertiary);
 }
 
+.about-text-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .about-text {
     line-height: 2;
     margin-bottom: 2rem;
     color: var(--clr-tertiary);
-}
-
-.btn-quite {
-    background: transparent;
-    color: var(--clr-tertiary);
-    animation: bounce 2s infinite;
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--clr-tertiary);
-    border-radius: var(--radius);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    transition: var(--transition);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.btn-quite:hover {
-    color: var(--clr-white);
-    border-color: var(--clr-secondary);
-}
-
-.btn-quite::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--clr-secondary);
-    transition: var(--transition);
-    z-index: -1;
-}
-
-.btn-quite:hover::before {
-    width: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.about-text-container {
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .about-columns {
@@ -325,6 +282,10 @@ img {
     font-style: italic;
     max-width: 800px;
     margin: 0 auto 2rem;
+}
+
+.text-center {
+    text-align: center;
 }
 
 
@@ -372,11 +333,7 @@ img {
 
 .team-member {
     text-align: center;
-    transition: var(--transition);
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .team-member-img-container {
@@ -593,20 +550,6 @@ img {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 3rem;
     color: #ccc;
-}
-
-
-/*================= ANIMACOES ============================================================================================*/
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
 }
 
 
